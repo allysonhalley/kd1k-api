@@ -1,4 +1,4 @@
-FROM openjdk:17-jdk-slim
+FROM ubuntu:latest AS build
 LABEL authors="allysonhalley"
 
 RUN apt-get update
