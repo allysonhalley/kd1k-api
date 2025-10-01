@@ -10,12 +10,10 @@ import java.util.Optional;
 @Repository
 public interface MilitaryPersonRepository extends JpaRepository<MilitaryPerson,Long> {
 
-    Optional<MilitaryPerson> findByMilitaryPersonId(Long id);
+    Optional<MilitaryPerson> findById(Long id);
 
     List<MilitaryPerson> findByCpf(String cpf);
 
-    List<MilitaryPerson> findByName(String name);            // exact match
-
-    List<MilitaryPerson> findByNameContaining(String name);
+    List<MilitaryPerson> findByFullNameContaining(String name);
 
 }

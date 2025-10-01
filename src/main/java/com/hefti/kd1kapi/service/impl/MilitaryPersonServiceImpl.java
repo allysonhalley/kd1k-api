@@ -58,7 +58,7 @@ public class MilitaryPersonServiceImpl implements MilitaryPersonService {
 
     @Override
     public List<MilitaryPersonDTO> getPersonByName(String name) {
-        List<MilitaryPerson> militaryPeople = militaryPersonRepository.findByNameContaining(name);
+        List<MilitaryPerson> militaryPeople = militaryPersonRepository.findByFullNameContaining(name);
         List<MilitaryPersonDTO> militaryPeopleDTO = militaryPeople.stream()
                 .map(this::convertToDTO)
                 .collect(Collectors.toList());
